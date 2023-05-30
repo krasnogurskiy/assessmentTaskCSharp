@@ -16,5 +16,15 @@ namespace app
         {
             InitializeComponent();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void player2_cb_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
