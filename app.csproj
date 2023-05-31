@@ -92,7 +92,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="kolo.png" />
+    <Content Include="Questions\difficult.txt" />
     <Content Include="Questions\eassy.txt" />
+    <Content Include="Questions\middle.txt" />
     <Content Include="Red_Triangle.png" />
     <Content Include="Resources\1.png" />
     <None Include="Resources\11.png" />
