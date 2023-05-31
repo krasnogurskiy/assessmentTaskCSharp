@@ -1,6 +1,4 @@
 ﻿
-using System;
-
 namespace app
 {
     partial class WelcomeForm
@@ -37,16 +35,16 @@ namespace app
             this.player3_tb = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.player2_cb = new System.Windows.Forms.CheckBox();
-            this.player3_cb = new System.Windows.Forms.CheckBox();
-            this.level_cb = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.level_cb = new System.Windows.Forms.ComboBox();
+            this.player3_cb = new System.Windows.Forms.CheckBox();
+            this.player2_cb = new System.Windows.Forms.CheckBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,6 +60,7 @@ namespace app
             this.start_bt.TabIndex = 0;
             this.start_bt.Text = "Почати";
             this.start_bt.UseVisualStyleBackColor = true;
+            this.start_bt.Click += new System.EventHandler(this.start_bt_Click);
             // 
             // player1_tb
             // 
@@ -95,11 +94,11 @@ namespace app
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Gold;
-            this.label1.Location = new System.Drawing.Point(113, 45);
+            this.label1.Location = new System.Drawing.Point(76, 45);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 30);
+            this.label1.Size = new System.Drawing.Size(171, 30);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Вітаємо";
+            this.label1.Text = "Вітаємо у грі";
             // 
             // panel1
             // 
@@ -125,38 +124,75 @@ namespace app
             this.panel1.Size = new System.Drawing.Size(343, 520);
             this.panel1.TabIndex = 5;
             // 
-            // label2
+            // label7
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.ForeColor = System.Drawing.Color.Gold;
-            this.label2.Location = new System.Drawing.Point(12, 125);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(144, 16);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Ім\'я першого гравця";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label7.ForeColor = System.Drawing.Color.Gold;
+            this.label7.Location = new System.Drawing.Point(34, 350);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(82, 16);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "складності";
             // 
-            // label3
+            // label6
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.ForeColor = System.Drawing.Color.Gold;
-            this.label3.Location = new System.Drawing.Point(12, 172);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(137, 16);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Ім\'я другого гравця";
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label6.ForeColor = System.Drawing.Color.Gold;
+            this.label6.Location = new System.Drawing.Point(23, 325);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(109, 16);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Оберіть рівень";
             // 
-            // label4
+            // level_cb
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label4.ForeColor = System.Drawing.Color.Gold;
-            this.label4.Location = new System.Drawing.Point(12, 230);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(145, 16);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Ім\'я третього гравця";
+            this.level_cb.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.level_cb.FormattingEnabled = true;
+            this.level_cb.Items.AddRange(new object[] {
+            "Легкий",
+            "Середній",
+            "Складний"});
+            this.level_cb.Location = new System.Drawing.Point(172, 333);
+            this.level_cb.Name = "level_cb";
+            this.level_cb.Size = new System.Drawing.Size(121, 24);
+            this.level_cb.TabIndex = 13;
+            // 
+            // player3_cb
+            // 
+            this.player3_cb.AutoSize = true;
+            this.player3_cb.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.player3_cb.ForeColor = System.Drawing.Color.Gold;
+            this.player3_cb.Location = new System.Drawing.Point(172, 258);
+            this.player3_cb.Name = "player3_cb";
+            this.player3_cb.Size = new System.Drawing.Size(75, 20);
+            this.player3_cb.TabIndex = 12;
+            this.player3_cb.Text = "Відсутній";
+            this.player3_cb.UseVisualStyleBackColor = true;
+            this.player3_cb.CheckedChanged += new System.EventHandler(this.player3_cb_CheckedChanged);
+            // 
+            // player2_cb
+            // 
+            this.player2_cb.AutoSize = true;
+            this.player2_cb.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.player2_cb.ForeColor = System.Drawing.Color.Gold;
+            this.player2_cb.Location = new System.Drawing.Point(172, 200);
+            this.player2_cb.Name = "player2_cb";
+            this.player2_cb.Size = new System.Drawing.Size(75, 20);
+            this.player2_cb.TabIndex = 11;
+            this.player2_cb.Text = "Відсутній";
+            this.player2_cb.UseVisualStyleBackColor = true;
+            this.player2_cb.CheckedChanged += new System.EventHandler(this.player2_cb_CheckedChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.Gold;
+            this.label5.Location = new System.Drawing.Point(189, 296);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(0, 13);
+            this.label5.TabIndex = 9;
             // 
             // button2
             // 
@@ -172,74 +208,38 @@ namespace app
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // label5
+            // label4
             // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.Gold;
-            this.label5.Location = new System.Drawing.Point(189, 296);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(0, 13);
-            this.label5.TabIndex = 9;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label4.ForeColor = System.Drawing.Color.Gold;
+            this.label4.Location = new System.Drawing.Point(12, 230);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(145, 16);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Ім\'я третього гравця";
             // 
-            // player2_cb
+            // label3
             // 
-            this.player2_cb.AutoSize = true;
-            this.player2_cb.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.player2_cb.ForeColor = System.Drawing.Color.Gold;
-            this.player2_cb.Location = new System.Drawing.Point(172, 200);
-            this.player2_cb.Name = "player2_cb";
-            this.player2_cb.Size = new System.Drawing.Size(75, 20);
-            this.player2_cb.TabIndex = 11;
-            this.player2_cb.Text = "Відсутній";
-            this.player2_cb.UseVisualStyleBackColor = true;
-            this.player2_cb.CheckedChanged += new System.EventHandler(this.player2_cb_CheckedChanged);
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label3.ForeColor = System.Drawing.Color.Gold;
+            this.label3.Location = new System.Drawing.Point(12, 172);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(137, 16);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Ім\'я другого гравця";
             // 
-            // player3_cb
+            // label2
             // 
-            this.player3_cb.AutoSize = true;
-            this.player3_cb.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.player3_cb.ForeColor = System.Drawing.Color.Gold;
-            this.player3_cb.Location = new System.Drawing.Point(172, 258);
-            this.player3_cb.Name = "player3_cb";
-            this.player3_cb.Size = new System.Drawing.Size(75, 20);
-            this.player3_cb.TabIndex = 12;
-            this.player3_cb.Text = "Відсутній";
-            this.player3_cb.UseVisualStyleBackColor = true;
-            // 
-            // level_cb
-            // 
-            this.level_cb.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.level_cb.FormattingEnabled = true;
-            this.level_cb.Items.AddRange(new object[] {
-            "Легкий",
-            "Середній",
-            "Складний"});
-            this.level_cb.Location = new System.Drawing.Point(172, 333);
-            this.level_cb.Name = "level_cb";
-            this.level_cb.Size = new System.Drawing.Size(121, 24);
-            this.level_cb.TabIndex = 13;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label6.ForeColor = System.Drawing.Color.Gold;
-            this.label6.Location = new System.Drawing.Point(23, 325);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(109, 16);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "Оберіть рівень";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label7.ForeColor = System.Drawing.Color.Gold;
-            this.label7.Location = new System.Drawing.Point(34, 350);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(82, 16);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "складності";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label2.ForeColor = System.Drawing.Color.Gold;
+            this.label2.Location = new System.Drawing.Point(12, 125);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(144, 16);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Ім\'я першого гравця";
             // 
             // WelcomeForm
             // 

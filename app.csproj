@@ -92,7 +92,19 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="kolo.png" />
+    <Content Include="Questions\eassy.txt" />
     <Content Include="Red_Triangle.png" />
+    <Content Include="Resources\1.png" />
+    <None Include="Resources\11.png" />
+    <Content Include="Resources\1618518649_1-phonoteka_org-p-fon-cherno-zelenii-polosi-1.jpg" />
+    <None Include="Resources\1618518649_1-phonoteka_org-p-fon-cherno-zelenii-polosi-11.jpg" />
+    <Content Include="Resources\1676636867_catherineasquithgallery-com-p-zelenie-polosi-fon-9.jpg" />
+    <None Include="Resources\1676636867_catherineasquithgallery-com-p-zelenie-polosi-fon-91.jpg" />
+    <Content Include="Resources\2.png" />
+    <None Include="Resources\21.png" />
+    <Content Include="Resources\3.png" />
+    <None Include="Resources\31.png" />
+    <Content Include="Resources\images.jpg" />
     <None Include="Resources\bg.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -16,7 +16,11 @@ namespace app
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            WelcomeForm welcomeForm = new WelcomeForm();
+            if (welcomeForm.ShowDialog() == DialogResult.OK)
+            {
+                Application.Run(new Form1(welcomeForm.players, welcomeForm.level));
+            }
         }
     }
 }
